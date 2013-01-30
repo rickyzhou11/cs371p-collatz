@@ -1,19 +1,19 @@
 Project #1: Collatz
 Date: Wed, 30 Jan 2013, 8pm
 
-Course Name:
+Course Name: CS371p
 Unique:
 
-First Name:
-Last Name:
-EID:
-E-mail:
+First Name: Chuyu
+Last Name:Zhou	
+EID:CZ568
+E-mail:rickyzhou@utexas.edu
 Estimated number of hours:
 Actual    number of hours:
 
-Turnin CS Username:
-GitHub ID:
-GitHub Repository Name:
+Turnin CS Username:rickyz
+GitHub ID:rickyzhou11
+GitHub Repository Name:cs371p-collatz
 
 Comments:
 
