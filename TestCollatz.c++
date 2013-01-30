@@ -67,6 +67,10 @@ struct TestCollatz : CppUnit::TestFixture {
     void test_eval_4 () {
         const int v = collatz_eval(900, 1000);
         CPPUNIT_ASSERT(v == 174);}
+		
+	void test_eval_5 (){
+		const int v = collatz_eval(1, 1);
+        CPPUNIT_ASSERT(v == 1);
 
     // -----
     // print
@@ -76,6 +80,20 @@ struct TestCollatz : CppUnit::TestFixture {
         std::ostringstream w;
         collatz_print(w, 1, 10, 20);
         CPPUNIT_ASSERT(w.str() == "1 10 20\n");}
+		
+	void test_print_2 () {
+        std::ostringstream w;
+        collatz_print(w, 100, 200, 125);
+        CPPUNIT_ASSERT(w.str() == "100 200 125\n");}
+		
+	void test_print3 () {
+        std::ostringstream w;
+        collatz_print(w, 5, 5, 6);
+        CPPUNIT_ASSERT(w.str() == "5 5 6\n");}
+    void test_print4 () {
+        std::ostringstream w;
+        collatz_print(w, 123456, 654321, 987321);
+        CPPUNIT_ASSERT(w.str() == "123456 654321 987321\n");}
 
     // -----
     // solve
@@ -86,6 +104,22 @@ struct TestCollatz : CppUnit::TestFixture {
         std::ostringstream w;
         collatz_solve(r, w);
         CPPUNIT_ASSERT(w.str() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n");}
+	void test_solve_2 () {                   
+        std::istringstream r("");
+        std::ostringstream w;
+        collatz_solve(r, w);
+        CPPUNIT_ASSERT(w.str() == "");}
+
+	void test_solve3 () {
+        std::istringstream r("10 1\n200 100\n210 201\n1000 900\n");
+        std::ostringstream w;
+        collatz_solve(r, w);
+        CPPUNIT_ASSERT(w.str() == "10 1 20\n200 100 125\n210 201 89\n1000 900 174\n");}
+    void test_solve4 () {
+        std::istringstream r("5 5\n");
+        std::ostringstream w;
+        collatz_solve(r, w);
+        CPPUNIT_ASSERT(w.str() == "5 5 6\n");}
 
     // -----
     // suite
@@ -97,6 +131,15 @@ struct TestCollatz : CppUnit::TestFixture {
     CPPUNIT_TEST(test_eval_2);
     CPPUNIT_TEST(test_eval_3);
     CPPUNIT_TEST(test_eval_4);
+    CPPUNIT_TEST(test_eval_5);
+    CPPUNIT_TEST(test_eval_6);
+    CPPUNIT_TEST(test_eval_7);
+    CPPUNIT_TEST(test_print_1);
+	CPPUNIT_TEST(test_print_2);
+	CPPUNIT_TEST(test_print_3);
+    CPPUNIT_TEST(test_solve_1);
+	CPPUNIT_TEST(test_solve_2);
+	CPPUNIT_TEST(test_solve_3);
     CPPUNIT_TEST(test_print);
     CPPUNIT_TEST(test_solve);
     CPPUNIT_TEST_SUITE_END();};
