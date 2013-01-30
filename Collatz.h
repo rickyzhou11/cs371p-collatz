@@ -24,7 +24,16 @@
  * @param j an int by reference
  * @return true if that succeeds, false otherwise
  */
-bool collatz_read (std::istream&, int&, int&);
+bool collatz_read (std::istream&r, int&i, int&j){
+	r>>i;
+	if(!r)
+		return false;
+	r>>j; 
+	assert(i>0);
+	assert(j>0);
+	return true;
+
+}
 
 // ------------
 // collatz_eval
