@@ -1,4 +1,53 @@
+==27748== Memcheck, a memory error detector
+==27748== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==27748== Using Valgrind-3.6.0.SVN-Debian and LibVEX; rerun with -h for copyright info
+==27748== Command: RunCollatz.c++.app
+==27748== 
 1 10 20
 100 200 125
 201 210 89
 900 1000 174
+23360 31307 308
+3813 6869 262
+31993 23333 308
+12169 12178 157
+6670 13379 276
+19545 13545 279
+31217 15137 308
+24940 8424 282
+15242 20436 279
+22547 23276 269
+32463 20558 308
+7437 18698 279
+19605 12510 279
+26362 19630 282
+12453 32246 308
+16658 29314 308
+14867 11057 276
+11799 22930 279
+21963 21396 269
+30600 5549 308
+14189 20245 279
+32024 4366 308
+17499 16729 266
+6239 12604 268
+13584 1474 276
+708762 350693 509
+64096 153282 375
+457000 450671 369
+3808 256873 443
+==27748== 
+==27748== HEAP SUMMARY:
+==27748==     in use at exit: 19,005,360 bytes in 393,391 blocks
+==27748==   total heap usage: 4,008,244 allocs, 3,614,853 frees, 192,518,304 bytes allocated
+==27748== 
+==27748== LEAK SUMMARY:
+==27748==    definitely lost: 0 bytes in 0 blocks
+==27748==    indirectly lost: 0 bytes in 0 blocks
+==27748==      possibly lost: 18,882,048 bytes in 393,376 blocks
+==27748==    still reachable: 123,312 bytes in 15 blocks
+==27748==         suppressed: 0 bytes in 0 blocks
+==27748== Rerun with --leak-check=full to see details of leaked memory
+==27748== 
+==27748== For counts of detected and suppressed errors, rerun with: -v
+==27748== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
