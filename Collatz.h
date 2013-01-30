@@ -44,7 +44,38 @@ bool collatz_read (std::istream&r, int&i, int&j){
  * @param j the end       of the range, inclusive
  * @return the max cycle length in the range [i, j]
  */
-int collatz_eval (int, int);
+int collatz_eval (int i, int j){
+	assert(i > 0);
+    assert(j > 0);
+	cache.clear();
+    cache[1]=1;
+    
+    int bignum;
+    int smallnum;
+    int v;
+    while(1){
+    	v=0;
+    if(i>j){
+        bignum=i;
+        smallnum=j;
+     }
+
+    else {
+       bignum=j;
+       smallnum=i;
+    }
+
+    while(smallnum<=bignum){
+        int tokenv=cycleCalc(smallnum);
+        if(tokenv>v)
+            v=tokenv;
+            smallnum++;
+    }
+
+    assert(v > 0);
+    return v;}
+	
+}
 
 // -------------
 // collatz_print
@@ -57,8 +88,11 @@ int collatz_eval (int, int);
  * @param j the end       of the range, inclusive
  * @param v the max cycle length
  */
-void collatz_print (std::ostream&, int, int, int);
-
+void collatz_print (std::ostream& w, int i, int j, int v);
+assert(i > 0);
+    assert(j > 0);
+    assert(v > 0);
+    w << i << " " << j << " " << v << std::endl;
 // -------------
 // collatz_solve
 // -------------
