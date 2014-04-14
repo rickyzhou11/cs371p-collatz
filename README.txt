@@ -3,14 +3,6 @@ Date: Wed, 30 Jan 2013, 8pm
 
 Course Name: CS371p
 Unique:
-
-First Name: Chuyu
-Last Name:Zhou	
-EID:CZ568
-E-mail:rickyzhou@utexas.edu
-Estimated number of hours:
-Actual    number of hours:
-
 Turnin CS Username:rickyz
 GitHub ID:rickyzhou11
 GitHub Repository Name:cs371p-collatz
